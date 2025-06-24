@@ -10,6 +10,7 @@ It performs two core tasks:
 
 
 📂 Google Sheet Structure
+
 	Sheet 1: Current Prices
 		| Coin ID | Symbol | Name | Current Price (USD) | Market Cap (USD) | 24h % Change | Last Updated | Last Synced |
 
@@ -38,17 +39,18 @@ Appends data every 30 minutes
 Trigger configured in Apps Script → Triggers
 
 🧠 Script Files & Functions
-  fetchCoinGeckoData()
-  Fetches data from the CoinGecko markets API and logs full response (useful during rate limiting or debugging).
 
-updateCurrentPrice(data)
-  Clears & writes the top 15 live prices to the Current Prices sheet.
+  	1. fetchCoinGeckoData()
+  		Fetches data from the CoinGecko markets API and logs full response (useful during rate limiting or debugging).
 
-updatePrice(data)
-  Appends timestamped rows to Price History for hourly tracking.
+	2. updateCurrentPrice(data)
+  		Clears & writes the top 15 live prices to the Current Prices sheet.
 
-runCrypto()
-  Main function that coordinates the process. Logs timestamp on completion.
+	3. updatePrice(data)
+  		Appends timestamped rows to Price History for hourly tracking.
+
+	4. runCrypto()
+  		Main function that coordinates the process. Logs timestamp on completion.
 
 Notes & Limitations
 
