@@ -9,7 +9,7 @@ It performs two core tasks:
   2. Price History Tab: Appends a snapshot of prices every 30 minutes for historical tracking.
 
 
-📂 Google Sheet Structure
+📂 Google Sheet Structure:
 
 	Sheet 1: Current Prices
 		| Coin ID | Symbol | Name | Current Price (USD) | Market Cap (USD) | 24h % Change | Last Updated | Last Synced |
@@ -26,7 +26,7 @@ Appends data every 30 minutes
 
 ~48 entries per coin per 24 hours
 
-🛠 How to Run
+🛠 How to Run:
 🔧 Manual Run (for testing):
 
       1. Open the Google Apps Script Editor
@@ -38,7 +38,7 @@ Appends data every 30 minutes
 
 Trigger configured in Apps Script → Triggers
 
-🧠 Script Files & Functions
+🧠 Script Files & Functions:
 
   	1. fetchCoinGeckoData()
   		Fetches data from the CoinGecko markets API and logs full response (useful during rate limiting or debugging).
@@ -52,7 +52,7 @@ Trigger configured in Apps Script → Triggers
 	4. runCrypto()
   		Main function that coordinates the process. Logs timestamp on completion.
 
-Notes & Limitations
+Notes & Limitations:
 
   1. Uses free CoinGecko API — subject to rate limits (429 error handled).
   2. Internal Ref Code field is left intentionally blank as per spec.
