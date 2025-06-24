@@ -10,15 +10,15 @@ It performs two core tasks:
 
 
 📂 Google Sheet Structure
-Sheet 1: Current Prices
-| Coin ID | Symbol | Name | Current Price (USD) | Market Cap (USD) | 24h % Change | Last Updated | Last Synced |
+	Sheet 1: Current Prices
+		| Coin ID | Symbol | Name | Current Price (USD) | Market Cap (USD) | 24h % Change | Last Updated | Last Synced |
 
-Overwrites every 30 minutes
+	Overwrites every 30 minutes
 
-Last Synced = timestamp of sync run
+	Last Synced = timestamp of sync run
 
-Sheet 2: Price History
-| Timestamp | Coin ID | Symbol | Name | Internal Ref Code | Current Price (USD) | Market Cap (USD) | 24h % Change |
+	Sheet 2: Price History
+		| Timestamp | Coin ID | Symbol | Name | Internal Ref Code | Current Price (USD) | Market Cap (USD) | 24h % Change |
 
 
 Appends data every 30 minutes
@@ -27,6 +27,7 @@ Appends data every 30 minutes
 
 🛠 How to Run
 🔧 Manual Run (for testing):
+
       1. Open the Google Apps Script Editor
       2. Select function runCrypto
       3. Click ▶️ Run
@@ -50,7 +51,8 @@ runCrypto()
   Main function that coordinates the process. Logs timestamp on completion.
 
 Notes & Limitations
-  Uses free CoinGecko API — subject to rate limits (429 error handled).
-  Internal Ref Code field is left intentionally blank as per spec.
-  Pagination and config-based asset selection are not implemented.
-  No retries or error notification emails (could be added for production use).
+
+  1. Uses free CoinGecko API — subject to rate limits (429 error handled).
+  2. Internal Ref Code field is left intentionally blank as per spec.
+  3. Pagination and config-based asset selection are not implemented.
+  4. No retries or error notification emails (could be added for production use).
